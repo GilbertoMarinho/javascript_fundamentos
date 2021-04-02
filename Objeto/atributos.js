@@ -1,5 +1,3 @@
-//coleção dinâmica(não fixo) de pares chave/valor
-
 //criando objeto de forma literal
 const carro = {
     modelo: 'kwid',
@@ -23,7 +21,3 @@ console.log(carro['proprietario']['nome']) //acessando pelo path com strings
 console.log(carro.condutores[0].nome) //acessando atributos dados dentro de um array
 console.log(carro.calcularValorSeguro()) //executando métodos
 delete carro.modelo //deletenado um atributo
-
-
-
-
