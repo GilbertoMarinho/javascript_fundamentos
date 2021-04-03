@@ -37,7 +37,7 @@ const carro = Object.create(null)
 carro.montadora = 'volkswagen'
 
 
-// Função que retonar um objeto a partir de um json string
+// Função que retrona um objeto a partir de um json string
 const jsonObj = JSON.parse(' {"pessoa":{ "nome": "Gilberto", "sexo": "M"}} ')
 console.log(jsonObj)
 
