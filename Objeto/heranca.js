@@ -27,12 +27,28 @@ const ferrari = {
     }
 }
 
-// criando relacção entre carro e ferrari; carro = prototipo de ferrari
+// criando relação entre carro e ferrari; carro = prototipo de ferrari
 Object.setPrototypeOf(ferrari, carro)
 console.log(ferrari.status())
 
 
 
+//Criando relaçao de herança com Object.create()
+const mustang = Object.create(carro, {modelo:{value: 'GT-500', writable:false}}) //carro = pai; mustang = filho
+mustang.ano = 1990
 
+//Object.Keys devolve somente as chaves pertencentes ao objeto, atributos obtidos por herança são desconsiderados
+console.log(Object.keys(mustang)) //[ 'modelo', 'ano' ]
 
-
+//Dentro do for todos os atributos do objetos são considerados, inclusice os recebidos por herança
+for(let chave in mustang){
+    mustang.hasOwnProperty(chave) ? console.log(`Próprio: ${chave}`) : console.log(`Por Herança: ${chave}`) 
+}
+/*
+Próprio: modelo
+Próprio: ano
+Por Herança: material
+Por Herança: peso
+Por Herança: velMaxima
+Por Herança: status
+*/
